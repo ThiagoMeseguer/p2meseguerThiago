@@ -1,7 +1,5 @@
 #boton {
-    padding: 4px;
-    background-color: beige;
-    color: black;
+    
     margin-left: 48%;
 }
 .contenedor {
@@ -33,7 +31,4 @@
     width: 10%;
     float: left;
     text-align: center;
-}
-.borde {
-  border: 2px solid black;
 }

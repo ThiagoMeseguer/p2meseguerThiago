@@ -28,7 +28,6 @@ function getConsulta(){
                                 " Longitud: "+info.location.coordinates.longitude
         let imagen=document.getElementById("imagen")
         imagen.src=info.picture.large
-        imagen.classList.add("borde")
 
         getCharacter(genderr)
     })
@@ -52,7 +51,6 @@ function getCharacter(genderr) {
         .then(function(data) {
             let imagen2= document.getElementById("imagen2")
             imagen2.src= data.image
-            imagen2.classList.add("borde")
 
             let nombre2 = document.getElementById("nombre2");
             nombre2.innerText="Nombre: "+data.name
@@ -69,7 +67,7 @@ function getCharacter(genderr) {
             let localidad2= document.getElementById("localidad2")
             localidad2.innerText="Localidad: "+data.location.name
 
-            if (genderr==data.gender.toLowerCase()) { // tolowercase() pasar a minuscula
+            if (genderr==data.gender.toLowerCase()) {
             let genero=document.getElementById("genero")
             genero.src="https://img.freepik.com/vector-premium/logotipo-simbolo-icono-marca-verificacion-verde-circulo-ilustracion-vector-color-verde-simbolo-garrapata_685751-503.jpg?w=2000"
             }
