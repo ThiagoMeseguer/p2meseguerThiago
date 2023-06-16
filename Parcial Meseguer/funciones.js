@@ -6,10 +6,9 @@ function getBuscar() {
     .then(res=>res.json())
     .then(function(data){
         console.log(data)
-        
         let localidades=data.localidades
-        for (let i = 0; i < localidades.length; i++) {
-            if ((idmuni>0)&&(idprov>0)){
+        if ((idmuni>0)&&(idprov>0)){
+            for (let i = 0; i < localidades.length; i++) {           
                 if ((idmuni==localidades[i].municipio.id)){
                     if (localidades[i].municipio.nombre!=null){
                         contenedor.innerHTML=`Provincia: ${localidades[i].provincia.nombre} <br> Municipio: ${localidades[i].municipio.nombre}`
@@ -20,6 +19,9 @@ function getBuscar() {
                     }
                 }
             }
+        }
+        else{
+            contenedor.innerHTML="Ingrese Los datos nuevamente"
         }
     })
     }
